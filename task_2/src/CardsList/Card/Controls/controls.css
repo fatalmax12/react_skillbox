@@ -1,0 +1,35 @@
+.controlsBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* .up {
+  width: 14px;
+  height: 14px;
+  background-color: grey;
+}
+
+.down {
+  width: 14px;
+  height: 14px;
+  background-color: grey;
+} */
+
+.number {
+  color: grey;
+}
+
+.rating , .comments, .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}

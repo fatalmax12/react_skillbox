@@ -1,0 +1,25 @@
+.content {
+  /* position: absolute; */
+  width: 1024px;
+  height: 926px;
+  /* left: 0px;
+  top: 159px; */
+  margin: 0 auto;
+
+  background: #FFFFFF;
+  border-radius: 7px;
+}
+
+@media (max-width: 320px) {
+  .content {
+    /* position: absolute; */
+    width: 320px;
+    height: 321px;
+    /* left: 0px;
+    top: 190px; */
+    margin: 0 auto;
+
+    background: #FFFFFF;
+    border-radius: 7px;
+  }
+}
