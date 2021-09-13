@@ -1,4 +1,8 @@
 .threadTitle {
+  margin-right: 20px;
+}
+
+/* .threadTitle {
   font-weight: normal;
   padding: 0 20px;
   font-size: 20px;
@@ -13,4 +17,4 @@
     font-size: 28px;
     line-height: 33px;
   }
-}
+} */
