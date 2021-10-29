@@ -41,6 +41,11 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
+    // watchOptions: {
+    //   ignored: [
+    //     path.resolve(__dirname, 'utils/react'),
+    //   ]
+    // }
   },
   plugins: [
     new HtmlWebpackPlugin({

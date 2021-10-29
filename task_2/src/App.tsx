@@ -1,12 +1,13 @@
 import React from "react";
-import { hot } from "react-hot-loader/root";
-import { Layout } from "./Layout";
 import '../main.global.css'
-import { Header } from "./Header/Header";
-import { Content } from "./Content";
+import { hot } from 'react-hot-loader/root';
 import { CardsList } from "./CardsList";
+import { Content } from "./Content";
+import { Header } from "./Header/Header";
+import { Layout } from "./Layout";
 
-
+//generateId
+//(item) => ({...item, id: generateRandomString()})
 function AppComponent() {
   return (
     <Layout>
@@ -18,4 +19,4 @@ function AppComponent() {
   );
 }
 
-export const App = hot(AppComponent);
+export const App = hot(() => <AppComponent/>);
