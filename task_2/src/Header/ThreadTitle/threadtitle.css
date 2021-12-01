@@ -1,5 +1,11 @@
 .threadTitle {
-  margin-right: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: #333333;
+  margin-right: 26px;
 }
 
 /* .threadTitle {

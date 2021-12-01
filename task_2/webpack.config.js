@@ -1,15 +1,15 @@
-// const clientConfig = require('./cfg/webpack.client.config');
+ const clientConfig = require('./cfg/webpack.client.config');
 // const serverConfig = require('./cfg/webpack.server.config');
 
-// module.exports = [
-//   clientConfig,
-//   serverConfig,
-// ];
+module.exports = [
+  clientConfig,
+  //serverConfig,
+];
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-// const { HotModuleReplacementPlugin } = require('webpack');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { HotModuleReplacementPlugin } = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV === 'development';
@@ -62,7 +62,17 @@ module.exports = {
   module: {
     rules: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.tsx?$/, loader: "ts-loader" },
+      {
+
+        test: /\.tsx?$/, loader: "ts-loader"
+        // test: /\.[tj]sx?$/,
+        //     use: {
+        //         loader: 'babel-loader',
+        //         options: {
+        //             presets: ['@babel/preset-env', '@babel/preset-react']
+        //         }
+        //     }
+    },
       {
         test: /\.css$/,
         use: ['style-loader', {
@@ -79,6 +89,12 @@ module.exports = {
       {
         test: GLOCBAL_CSS_REGEXP,
         use: ['style-loader', 'css-loader']
+      },{
+        test: /\.(png|jpe?g|svg)$/,
+        loader: 'file-loader',
+        options: {
+            name: 'images/[name].[ext]',
+        }
       }
     ]
   },

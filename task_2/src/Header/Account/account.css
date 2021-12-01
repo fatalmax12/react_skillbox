@@ -1,0 +1,23 @@
+.account {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.personPhoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* background-color: #D9D9D9; */
+}
+
+.personName {
+  margin-left: 13px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #999999;
+}

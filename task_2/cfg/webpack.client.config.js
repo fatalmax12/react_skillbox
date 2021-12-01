@@ -22,11 +22,11 @@ module.exports = {
     filename: 'client.js',
     path: path.resolve(__dirname, '../dist/client'),
   },
-  // devServer: {
-  //   contentBase: path.join(__dirname, 'dist'),
-  //   compress: true,
-  //   port: 9000,
-  // },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+  },
   // plugins: [
   //   new HtmlWebpackPlugin({
   //     template: 'src/index.html'

@@ -6,6 +6,14 @@
   border: 50%;
 }
 
+.publicTime {
+  margin-right: 7px;
+}
+
+.username {
+  color: goldenrod;
+}
+
 .fullname {
   color: goldenrod;
 }
@@ -31,5 +39,18 @@
   width: 20px;
   height: 20px;
   border: 1px solid grey;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.userLink {
+  display: flex;
+  align-items: center;
 }
 

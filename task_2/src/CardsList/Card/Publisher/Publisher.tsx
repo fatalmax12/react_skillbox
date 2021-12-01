@@ -6,16 +6,17 @@ export function Publisher() {
     <div className={styles.textContent}>
       <div className={styles.metaData}>
         <div className={styles.userLink}>
-          <img src="" alt="avatar" className={styles.avatar} />
-          <a href="" className={styles.username}></a>
+          <span className={styles.publicTime}>опубликовано 8 часов назад</span>
+          <div  className={styles.avatar}><img src="" /></div>
+          <a href="" className={styles.username}>Константин Кодов</a>
         </div>
-        <span className={styles.createAt}></span>
+        {/* <span className={styles.createAt}></span> */}
       </div>
-      <h2 className={styles.title}>
+      {/* <h2 className={styles.title}>
         <a href="" className={styles.postLink}>
           Не следует, однако, забывать, что современная...
         </a>
-      </h2>
+      </h2> */}
     </div>
   );
 }

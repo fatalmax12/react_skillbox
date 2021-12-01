@@ -4,7 +4,7 @@ import { Card } from './Card';
 
 export function CardsList() {
   return (
-    <ul className={styles.cardsList}>
+    <ul className={styles.cardList}>
       <Card />
     </ul>
   );

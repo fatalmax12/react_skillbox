@@ -13,3 +13,25 @@
     border-radius: 0;
   }
 } */
+
+.sortBlock {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #CC6633;
+  cursor: pointer;
+}
+
+.sortIcon {
+  width: 14px;
+  height: 100%;
+}
+
+.sortStroke {
+  width: 14px;
+  height: 100%;
+}

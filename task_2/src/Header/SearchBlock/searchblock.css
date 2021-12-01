@@ -20,3 +20,41 @@
     order: 3;
   }
 } */
+
+.searchBlock {
+  display: flex;
+  align-items: center;
+  padding: 13px 29px 13px 29px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background: #FFFFFF;
+}
+
+.searchInput {
+  height: 100%;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #C4C4C4;
+  background-color: transparent;
+}
+
+.searchInput::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #C4C4C4;
+}
+
+.searchIcon {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
