@@ -34,19 +34,27 @@ module.exports = {
   ],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, 'build'),
     //puplicPath: '/static/'
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000,
     // watchOptions: {
     //   ignored: [
-    //     path.resolve(__dirname, 'utils/react'),
+    //     path.resolve(__dirname, 'bin/dev.js'),
     //   ]
     // }
+    // watchOptions: {
+    //   ignored: [path.posix.resolve(__dirname, './bin')],
+    // },
   },
+  // devServer: {
+  //   contentBase: path.join(__dirname, 'dist/server'),
+  //   compress: true,
+  //   port: 9000,
+  //   // watchOptions: {
+  //   //   ignored: [
+  //   //     path.resolve(__dirname, 'utils'),
+  //   //   ]
+  //   // }
+  // },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'
@@ -63,15 +71,14 @@ module.exports = {
     rules: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
       {
-
-        test: /\.tsx?$/, loader: "ts-loader"
-        // test: /\.[tj]sx?$/,
-        //     use: {
-        //         loader: 'babel-loader',
-        //         options: {
-        //             presets: ['@babel/preset-env', '@babel/preset-react']
-        //         }
-        //     }
+        test: /\.tsx?$/,
+        use: [{
+            loader: 'ts-loader',
+            options: {
+                configFile: "tsconfig.json"
+            }
+        }],
+        exclude: /node_modules/,
     },
       {
         test: /\.css$/,

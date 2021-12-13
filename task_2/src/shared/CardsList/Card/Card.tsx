@@ -6,8 +6,9 @@ import { Preview } from './Preview';
 import { Publisher } from './Publisher';
 import { Dropdown } from '../../Dropdown';
 import { GenericList } from '../../GenericList';
-import { assignId, generateId, generateRandomString } from "../../../utils/react/generateRandomIndex";
-import { merge } from '../../../utils/js/merge';
+import { assignId, generateId, generateRandomString } from "../../../../utils/react/generateRandomIndex";
+import { merge } from '../../../../utils/js/merge';
+import { MenuItemsList } from '../../MenuItemsList';
 
 const LIST = [
   { As: 'a' as const, text: 'Комментарии', className: 'comments', href: '#' },
@@ -63,12 +64,13 @@ export function Card() {
       </div>
       <div className={styles.settings}>
         <Dropdown onOpen={() => console.log('opened')} onClose={() => console.log('closed')} isOpen={false} button={<Menu />}>
-          <div className={styles.bgMenu}>
-            {/* <button onClick={handleAdd}>Add Element</button> */}
+          {/* <div className={styles.bgMenu}>
+             <button onClick={handleAdd}>Add Element</button>
             <ul className={styles.list}>
               <GenericList list={LIST.map(merge({ onClick: handleItemClick }))} />
             </ul>
-          </div>
+          </div> */}
+          <MenuItemsList postId = '1'/>
         </Dropdown>
         <Controls />
       </div>

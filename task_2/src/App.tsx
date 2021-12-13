@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import '../main.global.css'
 import { hot } from 'react-hot-loader/root';
-import { CardsList } from "./CardsList";
-import { Content } from "./Content";
-import { Header } from "./Header/Header";
-import { Layout } from "./Layout";
+import { CardsList } from "./shared/CardsList";
+import { Content } from "./shared/Content";
+import { Header } from "./shared/Header/Header";
+import { Layout } from "./shared/Layout";
 
 //generateId
 //(item) => ({...item, id: generateRandomString()})
-function AppComponent() {
+function AppComponent(): JSX.Element {
   return (
     <Layout>
       <Header />
