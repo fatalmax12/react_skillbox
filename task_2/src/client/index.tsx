@@ -1,4 +1,6 @@
 import ReactDOM from 'react-dom';
-import { App } from '../App';
+import { App } from '../shared/App';
 
-ReactDOM.render(<App />, document.getElementById('react-root'));
+window.addEventListener('load', ()=>{
+  ReactDOM.render(<App />, document.getElementById('react-root'));
+});

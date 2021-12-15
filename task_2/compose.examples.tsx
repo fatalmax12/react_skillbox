@@ -1,7 +1,7 @@
 import * as React from "react"
-import { getValue } from "../utils/react/pickFromSynteticEvent"
-import { preventDefault } from "../utils/react/preventDefault"
-import { stopPropagation } from "../utils/react/preventDefault"
+import { getValue } from "./utils/react/pickFromSynteticEvent"
+import { preventDefault } from "./utils/react/preventDefault"
+import { stopPropagation } from "./utils/react/preventDefault"
 
 function InputExample({value, onChange}: any) {
   <input
