@@ -1,5 +1,5 @@
 import React from "react";
-import { ProgressPlugin } from "webpack";
+//import { ProgressPlugin } from "webpack";
 
 function NotStandartLink(props: any) {
   // const handleClick = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
