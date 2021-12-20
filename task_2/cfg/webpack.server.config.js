@@ -1,20 +1,20 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const NODE_ENV = process.env.NODE_ENV;
-const GLOBAL_CSS_REGEXP = /\.global\.css$/;
+const IS_DEV = NODE_ENV === 'development';
+const IS_PROD = NODE_ENV === 'production';
 
 module.exports = {
-    target: "node",
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+    },
     mode: NODE_ENV ? NODE_ENV : 'development',
+    target: 'node',
     entry: path.resolve(__dirname, '../src/server/server.js'),
     output: {
         path: path.resolve(__dirname, '../dist/server'),
         filename: 'server.js'
     },
-    resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
-    },
-    externals: [nodeExternals()],
     module: {
         rules: [
             {
@@ -22,27 +22,26 @@ module.exports = {
                 use: ['ts-loader']
             },
             {
+                //test: /\.less$/,
                 test: /\.css$/,
-                use: [{
-                        loader: 'css-loader',
+                use: [
+                    {
+                        loader: "css-loader",
                         options: {
                             modules: {
                                 mode: 'local',
                                 localIdentName: '[name]__[local]--[hash:base64:5]',
-                                exportOnlyLocals: true
                             },
-                            //onlyLocals: true,
+                            onlyLocals: true,
                         }
-                }],
-                exclude: GLOBAL_CSS_REGEXP
-            },
-            {
-                test: GLOBAL_CSS_REGEXP,
-                use: ['css-loader']
+                    },
+                    //'less-loader',
+                ]
             }
         ]
     },
+    externals: [nodeExternals()],
     optimization: {
-        minimize: false,
+        minimize: false
     }
 }
