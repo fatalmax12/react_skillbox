@@ -35,7 +35,6 @@ module.exports = {
                 use: ['ts-loader']
             },
             {
-                //test: /\.less$/,
                 test: /\.css$/,
                 use: [
                     'style-loader',
@@ -48,7 +47,6 @@ module.exports = {
                             }
                         }
                     },
-                    //'less-loader',
                 ]
             }
         ]
@@ -57,7 +55,7 @@ module.exports = {
     plugins: IS_DEV
         ? [
             new CleanWebpackPlugin(),
-           new HotModuleReplacementPlugin()
+            new HotModuleReplacementPlugin()
         ]
         : []
 };

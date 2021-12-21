@@ -22,7 +22,6 @@ module.exports = {
                 use: ['ts-loader']
             },
             {
-                //test: /\.less$/,
                 test: /\.css$/,
                 use: [
                     {
@@ -35,7 +34,6 @@ module.exports = {
                             onlyLocals: true,
                         }
                     },
-                    //'less-loader',
                 ]
             }
         ]
