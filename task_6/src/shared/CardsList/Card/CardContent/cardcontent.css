@@ -1,0 +1,41 @@
+.previewInfo>h1 {
+  width: 650px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #333333;
+}
+
+.social>div {
+  margin-right: 16px;
+}
+
+.social>div>span:first-child {
+  margin-right: 8px;
+}
+
+.social>div>span {
+  cursor: pointer;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.publisher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}

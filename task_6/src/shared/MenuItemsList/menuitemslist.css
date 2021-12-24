@@ -1,0 +1,12 @@
+.menuItem {
+  display: flex;
+  align-items: center;
+}
+
+.menuItem div:first-child{
+  margin-right: 5px;
+}
+
+.menuItem div {
+  cursor: pointer;
+}
