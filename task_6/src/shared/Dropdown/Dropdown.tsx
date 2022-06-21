@@ -3,7 +3,7 @@ import styles from './dropdown.css';
 
 interface IDropdownProps {
   button: React.ReactNode;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   isOpen?: boolean;
   onOpen?: () => void;
   onClose?: () => void;

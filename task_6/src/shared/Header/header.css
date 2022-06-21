@@ -43,17 +43,18 @@
   color: #CC6633;
 }
 
-/* @media all and (max-width: 1024px) {
+@media all and (min-width: 1024px) {
   .header {
     display: flex;
-    flex-flow: row nowrap;
+    /* flex-flow: row nowrap; */
     align-items: center;
     padding: 40px;
   }
 }
 
-@media all and (max-width: 1540px) {
+@media all and (min-width: 1540px) {
   .header {
     padding: 67px 0;
   }
-} */
+}
+
