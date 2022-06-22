@@ -12,28 +12,22 @@ interface IIconProps {
   size: number;
 }
 
+type icons = {
+  [key: string]: JSX.Element;
+}
+
 function Icon({ name, size }: IIconProps) {
-  let component = null;
+  const icons: icons = {
+    'CommentIcon': <CommentIcon width={size + ''} height={size + ''} />,
+    'ShareIcon': <ShareIcon width={size + ''} height={size + ''} />,
+    'BlockIcon': <BlockIcon width={size + ''} height={size + ''} />,
+    'LoadIcon': <LoadIcon width={size + ''} height={size + ''} />,
+    'WarningIcon': <WarningIcon width={size + ''} height={size + ''} />,
+  };
 
-  switch (name) {
-    case "CommentIcon":
-      component = <CommentIcon width={size + ''} height={size + ''} />;
-      break;
-    case "ShareIcon":
-      component = <ShareIcon width={size + ''} height={size + ''} />;
-      break;
-    case "BlockIcon":
-      component = <BlockIcon width={size + ''} height={size + ''} />;
-      break;
-    case "LoadIcon":
-      component =  <LoadIcon width={size + ''} height={size + ''} />;
-      break;
-    case "WarningIcon":
-      component =  <WarningIcon width={size + ''} height={size + ''} />;
-      break;
-  }
+  const Icon = icons[name];
 
-  return component;
+  return Icon;
 }
 
 export default Icon;
