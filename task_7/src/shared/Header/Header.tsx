@@ -16,7 +16,10 @@ export function Header() {
       <div className={styles.header__right}>
         <HeaderIndicators />
         <SearchBlock />
-        <Account />
+        <Account
+          avatarSrc={''}
+          username={''}
+        />
       </div>
       <ul className={styles.contentMenu}>
         <li>Просмотренное</li>
