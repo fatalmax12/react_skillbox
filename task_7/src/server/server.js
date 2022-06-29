@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/auth', (req, res) => {
-  //req.query.code
+  //req.query.code;
   res.send(
     indexTemplate(ReactDOM.renderToString(App())),
   );

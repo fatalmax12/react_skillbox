@@ -1,10 +1,10 @@
-import React from 'react';
-import { Account } from './Account';
-import styles from './header.css';
-import { HeaderIndicators } from './HeaderIndicators';
-import { SearchBlock } from './SearchBlock';
-import { SortBlock } from './SortBlock';
-import { ThreadTitle } from './ThreadTitle';
+import React, { useEffect, useState } from "react";
+import { Account } from "./Account";
+import styles from "./header.css";
+import { HeaderIndicators } from "./HeaderIndicators";
+import { SearchBlock } from "./SearchBlock";
+import { SortBlock } from "./SortBlock";
+import { ThreadTitle } from "./ThreadTitle";
 
 export function Header() {
   return (
@@ -16,10 +16,7 @@ export function Header() {
       <div className={styles.header__right}>
         <HeaderIndicators />
         <SearchBlock />
-        <Account
-          avatarSrc={''}
-          username={''}
-        />
+        <Account avatarSrc={''} username={''} />
       </div>
       <ul className={styles.contentMenu}>
         <li>Просмотренное</li>

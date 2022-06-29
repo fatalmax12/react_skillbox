@@ -1,4 +1,4 @@
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const path = require('path');
 
 const NODE_ENV = process.env.NODE_ENV;
@@ -17,21 +17,11 @@ function setupDevtool() {
 
 module.exports = {
   mode: NODE_ENV ? NODE_ENV : 'development',
-  entry: './src/client/index.tsx',
+  entry: '../src/client/index.tsx',
   output: {
     filename: 'client.js',
     path: path.resolve(__dirname, '../dist/client'),
   },
-  // devServer: {
-  //   contentBase: path.join(__dirname, 'dist'),
-  //   compress: true,
-  //   port: 9000,
-  // },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: 'src/index.html'
-  //   })
-  // ],
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
     extensions: [".ts", ".tsx", ".js", ".json", ".jsx"]

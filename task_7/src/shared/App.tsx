@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './main.global.css'
 import { hot } from 'react-hot-loader/root';
 import { CardsList } from "./CardsList";
@@ -7,8 +7,6 @@ import { Header } from "./Header/Header";
 import { Layout } from "./Layout";
 import { Text } from '../shared/Text';
 
-//generateId
-//(item) => ({...item, id: generateRandomString()})
 function AppComponent(): JSX.Element {
   return (
     <Layout>
@@ -24,4 +22,4 @@ function AppComponent(): JSX.Element {
   );
 }
 
-export const App = hot(() => <AppComponent/>);
+export const App = hot(() => <AppComponent />);

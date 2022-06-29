@@ -17,12 +17,14 @@ type icons = {
 }
 
 function Icon({ name, size }: IIconProps) {
+  let sizeValue: string = size + '';
+
   const icons: icons = {
-    'CommentIcon': <CommentIcon width={size + ''} height={size + ''} />,
-    'ShareIcon': <ShareIcon width={size + ''} height={size + ''} />,
-    'BlockIcon': <BlockIcon width={size + ''} height={size + ''} />,
-    'LoadIcon': <LoadIcon width={size + ''} height={size + ''} />,
-    'WarningIcon': <WarningIcon width={size + ''} height={size + ''} />,
+    'CommentIcon': <CommentIcon width={sizeValue} height={sizeValue} />,
+    'ShareIcon': <ShareIcon width={sizeValue} height={sizeValue} />,
+    'BlockIcon': <BlockIcon width={sizeValue} height={sizeValue} />,
+    'LoadIcon': <LoadIcon width={sizeValue} height={sizeValue} />,
+    'WarningIcon': <WarningIcon width={sizeValue} height={sizeValue} />,
   };
 
   const Icon = icons[name];
