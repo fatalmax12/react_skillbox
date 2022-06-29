@@ -12,13 +12,13 @@ function usePostsData() {
   const token = useContext(tokenContext);
 
   useEffect(() => {
-    axios.get('https://oauth.reddit.com/best', {
+    axios.get('https://oauth.reddit.com/best.json?sr_detail=true', {
       headers: {
         Authorization: `bearer ${token}`,
       }
     })
       .then((response) => {
-        const postData = response.data;
+        const postData = response.data.data;
         setData({ after: postData.after, before: postData.before });
       })
       .catch(console.log)

@@ -12,7 +12,7 @@ function useUserData() {
   const token = useContext(tokenContext);
 
   useEffect(() => {
-    axios.get('https://oauth.reddit.com/api/v1/me', {
+    axios.get('https://oauth.reddit.com/api/v1/me.json?sr_detail=true', {
       headers: {
         Authorization: `bearer ${token}`,
       }
