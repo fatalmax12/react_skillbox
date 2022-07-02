@@ -34,10 +34,10 @@ compiler.watch({}, (err) => {
 });
 
 nodemon({
-    script: path.resolve(__dirname, '../dist/server/server.js'),
+    script: path.resolve(__dirname, '../src/server/server.js'),
     watch: [
-        path.resolve(__dirname, '../dist/server'),
-        path.resolve(__dirname, '../dist/client')
+        path.resolve(__dirname, '../src/server'),
+        path.resolve(__dirname, '../src/client')
     ],
     delay: 2000
 })
