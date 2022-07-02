@@ -1,0 +1,25 @@
+.settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+
+.list>li:not(:last-child) {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.list>li>a {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #999999;
+}
+
+.list {
+  padding: 20px ;
+}
