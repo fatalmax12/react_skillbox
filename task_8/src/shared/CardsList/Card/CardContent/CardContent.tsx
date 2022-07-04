@@ -2,11 +2,17 @@ import React from 'react';
 import styles from './cardcontent.css';
 import { Publisher } from './Publisher';
 
-export function CardContent() {
+interface ICardContentProps {
+  title: string;
+  author: string;
+  authorImg: string;
+}
+
+export function CardContent({ title, author, authorImg }: ICardContentProps ) {
   return (
       <div className={styles.previewInfo}>
-        <h1>Для современного мира дальнейшее развитие всех систем</h1>
-        <Publisher />
+        <h1>{title}</h1>
+        <Publisher author={author} authorImg={authorImg} />
         <div className={styles.social}>
           <div>
             <span>

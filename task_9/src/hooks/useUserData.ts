@@ -12,16 +12,18 @@ function useUserData() {
   const token = useContext(tokenContext);
 
   useEffect(() => {
-    axios.get('https://oauth.reddit.com/api/v1/me.json?sr_detail=true', {
-      headers: {
-        Authorization: `bearer ${token}`,
-      }
-    })
-      .then((response) => {
-        const userData = response.data;
-        setData({ name: userData.name, iconImg: userData.icon_img });
+    if (token && token.length > 0 && token != 'undefined') {
+      axios.get('https://oauth.reddit.com/api/v1/me.json', {
+        headers: {
+          Authorization: `bearer ${token}`,
+        }
       })
-      .catch(console.log)
+        .then((response) => {
+          const userData = response.data;
+          setData({ name: userData.name, iconImg: userData.snoovatar_img });
+        })
+        .catch(console.log)
+    }
   }, [token]);
 
   return [data];

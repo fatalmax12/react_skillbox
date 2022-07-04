@@ -3,25 +3,26 @@ import axios from 'axios';
 import { tokenContext } from '../shared/context/tokenContext';
 
 interface IPostsData {
-  after?: string;
-  before?: string;
+  data: Array<any>;
 }
 
 function usePostsData() {
-  const [data, setData] = useState<IPostsData>({});
+  const [data, setData] = useState<IPostsData>({ data: [] });
   const token = useContext(tokenContext);
 
   useEffect(() => {
-    axios.get('https://oauth.reddit.com/best.json?sr_detail=true', {
-      headers: {
-        Authorization: `bearer ${token}`,
-      }
-    })
-      .then((response) => {
-        const postData = response.data.data;
-        setData({ after: postData.after, before: postData.before });
+    if (token && token.length > 0 && token != 'undefined') {
+      axios.get('https://oauth.reddit.com/best.json?sr_detail=true', {
+        headers: {
+          Authorization: `bearer ${token}`,
+        }
       })
-      .catch(console.log)
+        .then((response) => {
+          const postData = response.data.data.children;
+          setData({ data: postData });
+        })
+        .catch(console.log)
+    }
   }, [token]);
 
   return [data];

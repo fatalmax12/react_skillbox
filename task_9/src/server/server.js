@@ -30,7 +30,7 @@ app.get('/auth', (req, res) => {
         indexTemplate(ReactDOM.renderToString(App()), data['access_token']),
       );
     })
-    .catch(console.log('error get token'));
+    .catch(console.log);
 });
 
 app.listen(3000, () => {
