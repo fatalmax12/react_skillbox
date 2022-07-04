@@ -2,7 +2,11 @@ import React from "react";
 import styles from "./title.css";
 import Post from "../../../../Post/Post";
 
-function Title() {
+interface ITitleProps {
+  title: string;
+}
+
+function Title({ title }: ITitleProps) {
   const [isModalOpened, setIsModalOpened] = React.useState(false);
 
   return (
@@ -12,7 +16,7 @@ function Title() {
           setIsModalOpened(true);
         }}
       >
-        Для современного мира дальнейшее развитие всех систем
+        {title}
       </h1>
       {isModalOpened && <Post onClose={() => { setIsModalOpened(false); }}/>}
     </>

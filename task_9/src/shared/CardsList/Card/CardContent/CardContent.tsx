@@ -12,8 +12,8 @@ interface ICardContentProps {
 export function CardContent({ title, author, authorImg }: ICardContentProps ) {
   return (
       <div className={styles.previewInfo}>
-        <h1>{title}</h1>
-        <Title />
+        {/* <h1>{title}</h1> */}
+        <Title title={title}/>
         <Publisher author={author} authorImg={authorImg} />
         <div className={styles.social}>
           <div>
