@@ -13,6 +13,7 @@ export function CardsList() {
         data.map((el: any) => {
           return (
             <Card
+              key={el.data.id}
               image={el.data.sr_detail.banner_img}
               title={el.data.title}
               author={el.data.author}
