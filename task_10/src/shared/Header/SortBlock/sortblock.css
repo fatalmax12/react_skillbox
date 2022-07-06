@@ -1,0 +1,38 @@
+.sortBlock {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #CC6633;
+  cursor: pointer;
+}
+
+.sortIcon {
+  width: 14px;
+  height: 100%;
+}
+
+.sortStroke {
+  width: 14px;
+  height: 100%;
+}
+
+.sortBlock {
+  background-color: var(--white);
+  padding: 11px 20px;
+  border-radius: 7px;
+  margin: 0 0 20px;
+}
+
+@media all and (min-width: 1024px) {
+  .sortBlock {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
